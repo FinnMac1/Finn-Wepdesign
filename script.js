@@ -33,15 +33,20 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
+
 // Canvas Resize
-window.addEventListener('resize', () => {
+function resizeCanvas() {
   const bgCanvas = document.getElementById('background');
   const trailCanvas = document.getElementById('trail');
   bgCanvas.width = window.innerWidth;
   bgCanvas.height = window.innerHeight;
   trailCanvas.width = window.innerWidth;
   trailCanvas.height = window.innerHeight;
-});
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas(); // einmal beim Laden
+
 
 
 // Cursor
@@ -151,3 +156,4 @@ window.addEventListener('resize', ()=>{
   initParticles();
 
 });
+
