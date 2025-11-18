@@ -25,30 +25,6 @@ navLinks.forEach(link=>{
   });
 });
 
-// Hamburger Menü
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
-
-// Canvas Resize
-function resizeCanvas() {
-  const bgCanvas = document.getElementById('background');
-  const trailCanvas = document.getElementById('trail');
-  bgCanvas.width = window.innerWidth;
-  bgCanvas.height = window.innerHeight;
-  trailCanvas.width = window.innerWidth;
-  trailCanvas.height = window.innerHeight;
-}
-
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas(); // einmal beim Laden
-
-
-
 // Cursor
 const cursor = document.getElementById('cursor');
 document.addEventListener('mousemove', e=>{
@@ -154,6 +130,4 @@ window.addEventListener('resize', ()=>{
   trailCanvas.width=window.innerWidth;
   trailCanvas.height=window.innerHeight;
   initParticles();
-
 });
-
