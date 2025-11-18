@@ -358,110 +358,89 @@ section h2 {
 }
 
 /* --- Handy --- */
-/* Hamburger nur auf Handys */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
+@media(max-width: 600px) {
+
+    /* Cursor & Trail deaktivieren (auf Handy unsichtbar) */
+    #cursor, #trail {
+        display: none;
+    }
+    body {
+        cursor: auto;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        top: 10px;
+        padding: 10px 15px;
+    }
+
+    nav .logo img {
+        height: 50px;
+        width: 50px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    #animated-name {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero .btn {
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+
+    section {
+        padding: 80px 15px;
+    }
+
+    section h2 {
+        font-size: 32px;
+    }
+
+    .ueber-mich-box {
+        padding: 35px 20px;
+    }
+
+    .ueber-mich-box p {
+        font-size: 16px;
+    }
+
+    .card, .client-stat {
+        min-width: 160px;
+        padding: 25px 20px;
+        font-size: 16px;
+    }
+
+    .contact-box {
+        padding: 30px 20px;
+        font-size: 18px;
+    }
+
+    .contact-box a {
+        padding: 7px 12px;
+        font-size: 16px;
+    }
 }
 
-.hamburger span {
-  height: 3px;
-  width: 25px;
-  background: black;
-  margin: 4px 0;
-  border-radius: 2px;
+/* --- Kleine Handys --- */
+@media(max-width: 420px) {
+    #animated-name { font-size: 36px; }
+    nav ul { gap: 8px; }
 }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-/* Handys */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: white;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
-
-/* Hamburger-Icon */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger span {
-  height: 3px;
-  width: 25px;
-  background: black;
-  margin: 4px 0;
-  border-radius: 2px;
-}
-
-/* Desktop-Nav */
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-/* Media Query für Handys */
-@media screen and (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: white;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
-/* Canvas Hintergrund responsive */
-canvas#background,
-canvas#trail {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-}
-
-canvas#trail {
-  pointer-events: none;
-  z-index: 1;
-}
 
